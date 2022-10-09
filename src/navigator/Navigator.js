@@ -11,16 +11,11 @@ const Tab = createBottomTabNavigator();
 
 export const Navigator = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        // options={{
-        //   tabBarIcon: () => {
-        //     <Feather name="home" size={24} color="black" />;
-        //   },
-        // }}
-      />
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Reels" component={ReelScreen} />
       <Tab.Screen name="Shop" component={ShopScreen} />
